@@ -924,7 +924,7 @@ header.main-header:before {
     background: rgba(255, 255, 255, 0.051);
 }
 
-.element:before {
+/* .element:before {
     font-family: Font Awesome\ 5 Pro;
     content: "\f00d";
     color: #fff;
@@ -932,8 +932,16 @@ header.main-header:before {
     top: 14px;
     font-size: 20px;
     font-weight: 300;
+} */
+.element:before {
+    font-family:var(--fa-style-family,"Font Awesome 6 Free");
+    content: "\f111";
+    color: #000;
+    position: relative;
+    top: 14px;
+    font-size: 20px;
+    font-weight: 300;
 }
-
 .nav-scroll-bar-wrap {
     overflow: hidden;
     position: absolute;
@@ -5804,3 +5812,40 @@ header.main-header:before {
     left: 26%;
 }
 }
+
+
+
+
+
+
+
+
+
+
+#cursor {
+    position: fixed;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: #000000;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+  }
+  
+  #cursor-border {
+    --size: 50px;
+    position: fixed;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgb(0, 0, 0);
+    pointer-events: none;
+    transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+      height 0.15s ease-out, background-color 0.15s ease-out;
+    z-index: 999;
+  }
+  
