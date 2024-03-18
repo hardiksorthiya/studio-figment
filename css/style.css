@@ -193,7 +193,7 @@ canvas {
 .fixed-filter-panel.fw-panel:after,
 .share-button span:before,
 .custom-skillbar {
-    background: #b9b9b9;
+    background: #000000;
 }
 
 .sliding-menu a.act-link,
@@ -678,7 +678,7 @@ header.main-header:before {
     line-height: 40px;
     box-sizing: border-box;
     display: inline-table;
-    border: 1px solid #b9b9b9;
+    /* border: 1px solid #b9b9b9; */
     border-top: none;
     position: relative;
 }
@@ -702,9 +702,9 @@ header.main-header:before {
     width: 100%;
 }
 
-.left-panel_social li:first-child {
+/* .left-panel_social li:first-child {
     border-top: 1px solid #b9b9b9;
-}
+} */
 
 .left-panel_social li a {
     position: relative;
@@ -1332,8 +1332,8 @@ nav.nav-inner {
 .carnival {
     position: relative;
     left: -44px;
-    height: 120px;
-    width: 90px;
+    height: 110px;
+    width: 100px;
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     padding: 20px 0;
@@ -4056,11 +4056,11 @@ section.hero-section .fs-canvas {
     position: relative;
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    color: rgba(255, 255, 255, 0.41);
+    color: rgb(0 0 0 / 41%);
 }
 
 .share-button:hover span {
-    color: #fff;
+    color: #000000;
 }
 
 .share-button:before,
@@ -4228,7 +4228,7 @@ section.hero-section .fs-canvas {
 }
 
 .team-social li a:hover {
-    color: #fff;
+    color: #000000;
 }
 
 .team-social,

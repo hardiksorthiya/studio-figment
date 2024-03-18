@@ -3,9 +3,12 @@
 <html lang="en">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <div id="head"></div>
+    <title>Studio Figment.</title>
+</head>
     <script> 
         $(function(){
           $("#header").load("common/header.html");
+          $("#leftpanel").load("common/leftpanel.html");
           $("#head").load("common/head.html");
           $("#footer").load("common/footer.html");
           $("#nav").load("common/nav.html");});
@@ -21,30 +24,13 @@
         <div id="main">
             <!-- header start  -->
             <div id="header"></div>
-             <!-- header end -->
-            <!-- left-panel -->
-            <div class="left-panel">
-                <div class="horizonral-subtitle"><span><strong></strong></span></div>
-                <div class="left-panel_social">
-                    <ul >
-                        <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- left-panel end -->
-            <!-- share-button -->
-            <div class="share-button showshare">
-                <span>Share</span>
-            </div>
+            <div id="leftpanel"></div>
             <!-- share-button end -->
             <!-- wrapper  -->	
             <div id="wrapper">
                 <!-- content-holder  -->	
                 <div class="content-holder" data-pagetitle="Home For You">
-                    <div id="nav"></div>          
+                    <div id="nav"></div>         
                     <!--Content -->
                     <div class="content full-height hidden-item home-half-slider">
                         <div class="hero-canvas-wrap">
@@ -189,6 +175,9 @@
         </div>
         <!-- Main end -->
         <!--=============== scripts  ===============-->
-    <div id="footer"></div>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/core.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
     </body>
 </html>
