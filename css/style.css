@@ -666,7 +666,7 @@ header.main-header:before {
 
 .left-panel_social {
     position: absolute;
-    bottom: 110px;
+    bottom: 60px;
     left: 50%;
     margin-left: -20px;
     width: 40px;
