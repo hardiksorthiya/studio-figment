@@ -24,6 +24,16 @@
 </header>
 <div id="cursor"></div>
 <div id="cursor-border"></div>
+<style>
+.drag-pointer:before {
+    content: "expand";
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    left: 7%;
+}
+</style>
 <!-- <input type="button" value="Hover Me!" data-cursor="pointer">
 <input type="button" value=":-D" data-cursor="pointer2"> -->
 
@@ -40,6 +50,8 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 });
 
+
+
 requestAnimationFrame(function loop() {
   const easting = 8;
   cursorBorderPos.x += (cursorPos.x - cursorBorderPos.x) / easting;
@@ -52,8 +64,9 @@ requestAnimationFrame(function loop() {
 document.querySelectorAll("[data-cursor]").forEach((item) => {
   item.addEventListener("mouseover", (e) => {
     if (item.dataset.cursor === "pointer") {
-      cursorBorder.style.backgroundColor = "rgba(255, 255, 255, .6)";
-      cursorBorder.style.setProperty("--size", "30px");
+      cursorBorder.style.backgroundColor = "black";
+      cursorBorder.classList.add('drag-pointer');
+      cursorBorder.style.setProperty("--size", "60px");
     }
     if (item.dataset.cursor === "pointer2") {
       cursorBorder.style.backgroundColor = "white";
@@ -64,6 +77,7 @@ document.querySelectorAll("[data-cursor]").forEach((item) => {
   item.addEventListener("mouseout", (e) => {
     cursorBorder.style.backgroundColor = "unset";
     cursorBorder.style.mixBlendMode = "unset";
+    cursorBorder.classList.remove('drag-pointer');
     cursorBorder.style.setProperty("--size", "50px");
   });
 });
