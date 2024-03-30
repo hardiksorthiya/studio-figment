@@ -1589,6 +1589,11 @@ nav.nav-inner {
     left: 15%;
     z-index: 10;
     top: 29%;
+    background: white;
+    padding: 20px;
+    box-shadow: 2px 2px 10px #00000057;
+    max-height: 260px;
+    min-width: 400px;
 }
 
 .half-hero-wrap h1:before {
@@ -1604,11 +1609,9 @@ nav.nav-inner {
     color: #080305;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    font-size: 55px;
+    font-size: 24px;
     text-align: left;
     font-weight: 900;
-    line-height: 70px;
-    padding-bottom: 20px;
     position: relative;
 }
 
@@ -1617,8 +1620,8 @@ nav.nav-inner {
     font-size: 14px;
     float: left;
     max-width: 550px;
-    color: rgba(255, 255, 255, 0.71);
-    font-weight: 500;
+    color: #ddd;
+    font-weight: 600;
 }
 
 .rotate_text {
@@ -1637,13 +1640,14 @@ nav.nav-inner {
 }
 
 .half-hero-wrap_link {
-    float: left;
-    color: #fff;
+    float: right;
+    color: white;
     font-size: 10px;
     font-weight: 500;
-    letter-spacing: 2px;
     text-transform: uppercase;
     margin-top: 20px;
+    background: black;
+    padding: 10px 20px;
 }
 
 .half-hero-wrap_link:hover {
