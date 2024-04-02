@@ -906,7 +906,7 @@ function initTheside() {
         function hideMenu() {
             TweenMax.to(nhw, 0.6, {
                 force3D: false,
-                right: "-500px",
+                right: "-100%",
                 ease: Expo.easeInOut
             });
             nhw.addClass("but-hol");
