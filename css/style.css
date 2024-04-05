@@ -2136,7 +2136,7 @@ section {
     position: relative;
     float: left;
     width: 100%;
-    padding: 110px 0;
+    padding: 20px 0;
     background: var(--background-colot);;
 }
 
@@ -6104,9 +6104,24 @@ a.project-link {
   .screenshot_slider .owl-nav button {
     font-size: 24px !important;
     margin: 10px;
-    color: #033aff !important;
+    color: #033aff00 !important;
   }
-
+  button.owl-prev:before {
+    content: "<";
+    position: absolute !important;
+    top: 40%;
+    left: 18%;
+    font-size: 49px;
+    color: #ddd;
+}
+button.owl-next:before {
+    content: ">";
+    position: absolute !important;
+    top: 40%;
+    right: 20%;
+    font-size: 49px;
+    color: #ddd;
+}
   .split-sceen-content_title.fl-wrap.hp-ab-one {
     background: white;
     padding: 70px 20px;
@@ -6150,4 +6165,100 @@ h2.hp-title-two {
 .value-section {
     background: white;
     padding: 30px;
+}
+  
+  .text-center.hp-b-sl-t h1 {
+    color: #080305;
+    font-family: var(--font-family-body);
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 900;
+    position: relative;
+}
+.text-center.hp-b-sl-t h4 {
+    font-size: 14px;
+    max-width: 550px;
+    color: #ddd;
+    font-weight: 600;
+}
+
+
+.heading-project {
+    font-size: 54px;
+    text-align: justify;
+    font-weight: 500;
+}
+.first-pro-de-one .row {
+    display: flex;
+    align-items: flex-end;
+}
+.sub-number-project {
+    font-size: 24px;
+    text-align: end;
+}
+.heading-pr-de-obe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.image-baner-pr-detail img {
+    max-height: 680px;
+}
+h2.project-text-heading {
+    text-align: justify;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+table.table-hp tr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 24px;
+    text-align: justify;
+}
+table.table-hp {
+    display: flex;
+    align-items: center;
+}
+table.table-hp tr.table-active {
+    padding-left: 90px;
+    font-weight: 600;
+}
+tr.f-col-hp {
+    font-weight: 100;
+}
+.long-text-project-detail p {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 30px 0;
+    line-height: 34px;
+    color: black;
+}
+.image-second-pr-det {
+    padding-top: 350px;
+}
+.image-second-pr-det img {
+    height: 600px;
+}
+.image-sec-one-pr-dt img {
+    width: 100%;
+    border: 1px dashed black;
+    padding: 20px;
+}
+.image-sec-two-pr-dt img, .image-sec-last-pr-dt img {
+    margin: 20px 0;
+    width: 100%;
+}
+.row.sec-im-sec-hp {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.row.sec-im-las-hp{
+    display: flex;
+    justify-content:flex-start;
+}
+.second-pr-det-sec {
+    margin-top: 60px;
 }

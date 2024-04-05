@@ -12,9 +12,7 @@
   <!--=============== favicons ===============-->
   <link rel="shortcut icon" href="images/fevicon.webp">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="js/owl.js"></script>
 </head>
 <script> 
   $(function(){
@@ -34,41 +32,89 @@
       <!-- content-holder  -->	
       <div class="content-holder" data-pagetitle="Our projects" style="
       display: flex;
-      align-items: center">
+      align-items: center;
+      background: white;">
           <div id="nav"></div> 
           <div class="content">
-            <h1 class="wordk-heading text-center">Our Work</h1>
-            <div class="section-padding">
+            <!-- <h1 class="wordk-heading text-center">Our Work</h1> -->
+            <div class="section-padding hp-c">
               <div class="screenshot_slider owl-carousel">
-                <div class="item" data-cursor="pointer">
-                  <img src="images/h2.jpg" alt="" title="">
-                </div>
-                <div class="item" data-cursor="pointer">
-                  <img src="images/h1.jpg" alt="" title="">
-                </div>
-                <div class="item" data-cursor="pointer">
-                  <img src="images/img3.jpg" alt="" title="">
-                </div>
-                <div class="item" data-cursor="pointer">
-                  <img src="images/img4.jpg" alt="" title="">
-                </div>
-                <div class="item" data-cursor="pointer">
-                  <img src="images/img1.jpg" alt="" title="">
-                </div>
-                <div class="item" data-cursor="pointer">
-                  <img src="images/img4.jpg" alt="" title="">
-                </div>
-                <div class="item" data-cursor="pointer">
-                  <img src="images/img4.jpg" alt="" title="">
-                </div>
-                <div class="item" data-cursor="pointer">
-                  <img src="images/img4.jpg" alt="" title="">
-                </div>
+                <a class="link-pr-hp" href="#">
+                  <div class="item" data-cursor="pointer">
+                    <img src="images/h2.jpg" alt="" title="">
+                    <div class="text-center hp-b-sl-t">
+                      <h1>Botanist<span> House </span></h1>
+                    <h4>Plasana , Gujarat</h4>
+                    </div>
+                  </div>
+                </a>
+
+                <a class="link-pr-hp" href="#">
+                  <div class="item" data-cursor="pointer">
+                    <img src="images/h1.jpg" alt="" title="">
+                    <div class="text-center hp-b-sl-t">
+                      <h1>Botanist<span> House </span></h1>
+                    <h4>Plasana , Gujarat</h4>
+                    </div>
+                  </div>
+                </a>
+
+                <a class="link-pr-hp" href="#">
+                  <div class="item" data-cursor="pointer">
+                    <img src="images/1.jpg" alt="" title="">
+                    <div class="text-center hp-b-sl-t">
+                      <h1>Botanist<span> House </span></h1>
+                    <h4>Plasana , Gujarat</h4>
+                    </div>
+                  </div>
+                </a>
+
+                <a class="link-pr-hp" href="#">
+                  <div class="item" data-cursor="pointer">
+                    <img src="images/12.jpg" alt="" title="">
+                    <div class="text-center hp-b-sl-t">
+                      <h1>Botanist<span> House </span></h1>
+                    <h4>Plasana , Gujarat</h4>
+                    </div>
+                  </div>
+                </a>
+
+                <a class="link-pr-hp" href="#">
+                  <div class="item" data-cursor="pointer">
+                    <img src="images/8.jpg" alt="" title="">
+                    <div class="text-center hp-b-sl-t">
+                      <h1>Botanist<span> House </span></h1>
+                    <h4>Plasana , Gujarat</h4>
+                    </div>
+                  </div>
+                </a>
+
+                
+                
              </div>
            </div>
           </div>
         </div>
     </div>
+    <style>
+      .hp-c .owl-carousel .owl-item img {
+    display: block;
+    width: 90%;
+    height: 390px;
+}
+.screenshot_slider .owl-item.center .item .hp-b-sl-t {
+  margin-top: 50px;
+    transform: scale(1.15);
+}
+.screenshot_slider .owl-item .item .hp-b-sl-t {
+    transform: scale(0.8);
+    margin-top: -20px;
+}
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled {
+    display: block;
+    margin-top: -60px;
+}
+    </style>
     <div id="footerhome"></div>
   </div>
   
