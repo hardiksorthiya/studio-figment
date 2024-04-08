@@ -6026,9 +6026,9 @@ header.main-header:before {
 }
 
 
-.carousel {
+/* .carousel {
   background: #FAFAFA;
-}
+} */
 
 .carousel-main {
   margin-bottom: 8px;
@@ -6261,4 +6261,41 @@ tr.f-col-hp {
 }
 .second-pr-det-sec {
     margin-top: 60px;
+}
+.carousel-inner.hp-box-caro {
+    width: 150%;
+    left: -21.5%;
+}
+.testimoial-box {
+    background: white;
+    padding: 40px 40px 0;
+    width: 80%;
+}
+a.left.carousel-control, a.right.carousel-control {
+    background: transparent;
+}
+a.left.carousel-control {
+    left: 16%;
+}
+a.right.carousel-control {
+    right: 18%;
+}
+.testimoial-box .text-hp {
+    font-weight: 600;
+    font-size: 18px;
+}
+.sub-testi-hp {
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 50px;
+}
+.sub-testi-hp p {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+.carosule-about-hp {
+    margin: 50px 0 100px;
 }

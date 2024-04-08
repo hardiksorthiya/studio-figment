@@ -1,0 +1,226 @@
+<!-- <html lang="en"><head>
+    <meta charset="UTF-8">
+    
+  
+      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+  <style>
+  body {
+    background: #333;
+    color: #ddd;
+  }
+  @media (min-width: 768px) {
+    .multi-item-carousel .carousel-inner .carousel-item {
+      margin-right: inherit;
+    }
+    .multi-item-carousel .carousel-inner .carousel-item.active + .carousel-item,
+    .multi-item-carousel .carousel-inner .carousel-item.active + .carousel-item + .carousel-item {
+      display: block;
+    }
+    .multi-item-carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .multi-item-carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .multi-item-carousel .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+      transition: none;
+    }
+    .multi-item-carousel .carousel-inner .carousel-item.active + .carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -33.33333333%;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+    }
+    .multi-item-carousel .carousel-inner .carousel-item-next,
+    .multi-item-carousel .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+    .multi-item-carousel .carousel-inner .carousel-item-prev.carousel-item-right {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+    }
+    .multi-item-carousel .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .multi-item-carousel .carousel-item-next.carousel-item-left + .carousel-item,
+    .multi-item-carousel .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .multi-item-carousel .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+    .multi-item-carousel .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .multi-item-carousel .carousel-item-prev.carousel-item-right + .carousel-item,
+    .multi-item-carousel .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .multi-item-carousel .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      display: block;
+      visibility: visible;
+    }
+  }
+  </style>
+    
+  </head>
+  
+  <body translate="no" data-new-gr-c-s-check-loaded="14.1166.0" data-gr-ext-installed="">
+    <div class="container">
+    <div class="carousel slide multi-item-carousel" id="theCarousel">
+      <div class="carousel-inner row w-100 mx-auto">
+        <div class="carousel-item active col-md-4">
+          <img src="https://via.placeholder.com/300/f44336/000000?text=1" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="https://via.placeholder.com/300/e91e63/000000?text=2" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="https://via.placeholder.com/300/9c27b0/000000?text=3" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="https://via.placeholder.com/300/673ab7/000000?text=4" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="https://via.placeholder.com/300/4caf50/000000?text=5" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="https://via.placeholder.com/300/8bc34a/000000?text=6" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="https://via.placeholder.com/300/ffffff/000000?text=7" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="carousel-item col-md-4">
+          <img src="https://via.placeholder.com/300/000000/ffffff?text=8" class="img-fluid mx-auto d-block">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#theCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script id="rendered-js">
+  
+  $('.multi-item-carousel').on('slide.bs.carousel', function (e) {
+    let $e = $(e.relatedTarget),
+    itemsPerSlide = 3,
+    totalItems = $('.carousel-item', this).length,
+    $itemsContainer = $('.carousel-inner', this),
+    it = itemsPerSlide - (totalItems - $e.index());
+    if (it > 0) {
+      for (var i = 0; i < it; i++) {if (window.CP.shouldStopExecution(0)) break;
+        $('.carousel-item', this).eq(e.direction == "left" ? i : 0).
+        appendTo($itemsContainer);
+      }window.CP.exitedLoop(0);
+    }
+  });
+      </script>
+  
+    
+  
+  
+  
+  </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html> -->
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  
+  <!-- Latest compiled and minified JavaScript -->
+  
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<style>
+    .multi-item-carousel .carousel-inner > .item {
+  transition: 0.6s ease-in-out all;
+}
+.multi-item-carousel .carousel-inner .active.left {
+  left: -33%;
+}
+.multi-item-carousel .carousel-inner .active.right {
+  left: 33%;
+}
+.multi-item-carousel .carousel-inner .next {
+  left: 33%;
+}
+.multi-item-carousel .carousel-inner .prev {
+  left: -33%;
+}
+.multi-item-carousel .carouse-control.left,
+.multi-item-carousel .carouse-control.right {
+  background-image: none;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .multi-item-carousel .carousel-inner > .item {
+    transition: 0.6s ease-in-out all;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+    -webkit-perspective: none;
+    transform: none!important;
+  }
+}
+
+</style>
+
+
+  <div class="container-fluid">
+    <div class="col-md-8 col-md-offset-2">
+    <div class="carousel slide multi-item-carousel" id="theCarousel">
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="col-xs-4"><a href="#1"><img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" class="img-responsive"></a></div>
+        </div>
+        <div class="item">
+          <div class="col-xs-4"><a href="#1"><img src="https://thumbs.dreamstime.com/b/lonely-tree-empty-green-field-copy-space-34718407.jpg" class="img-responsive"></a></div>
+        </div>
+        <div class="item">
+          <div class="col-xs-4"><a href="#1"><img src="https://thumbs.dreamstime.com/b/lonely-tree-empty-green-field-copy-space-34718407.jpg" class="img-responsive"></a></div>
+        </div>
+        <div class="item">
+          <div class="col-xs-4"><a href="#1"><img src="https://thumbs.dreamstime.com/b/lonely-tree-empty-green-field-copy-space-34718407.jpg" class="img-responsive"></a></div>
+        </div>
+        <div class="item">
+          <div class="col-xs-4"><a href="#1"><img src="https://thumbs.dreamstime.com/b/lonely-tree-empty-green-field-copy-space-34718407.jpg" class="img-responsive"></a></div>
+        </div>
+        <div class="item">
+          <div class="col-xs-4"><a href="#1"><img src="https://thumbs.dreamstime.com/b/lonely-tree-empty-green-field-copy-space-34718407.jpg" class="img-responsive"></a></div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+      <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+    </div>
+    </div>
+    </div>
+
+    <script>
+        $('#theCarousel').carousel({
+  interval: 2000
+})
+
+$('.multi-item-carousel .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+  
+  if (next.next().length>0) {
+    next.next().children(':first-child').clone().appendTo($(this));
+  }
+  else {
+  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+  }
+});
+    </script>
